@@ -1,6 +1,10 @@
 import os
 import sys
 from setuptools import setup, find_packages
+try:
+    basestring
+except NameError:
+    basestring = str
 
 vcs = __import__('vcs')
 readme_file = os.path.abspath(os.path.join(os.path.dirname(__file__),
